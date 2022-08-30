@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_intro"
+    tools:context=".EmailCreateAccount">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indeterminateAnimationType="contiguous"
+        app:indicatorColor="@array/progress_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvIntroWelcome_Heading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgEmailCreate_BackArrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txvIntroWelcome_HeadingVinyl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvIntroWelcome_Heading2" />
+
+    <ImageView
+        android:id="@+id/imgEmailCreate_BackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/back"
+        android:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_24dp"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_create_account"
+        android:textColor="@color/color_white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvIntroWelcome_HeadingVinyl2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutEmailCreateAccount_EmailAddress"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="307sp"
+        android:layout_height="83sp"
+        android:layout_margin="4sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/email_address"
+        android:textColorHint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterTextColor="@color/white"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@android:color/holo_red_light"
+
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtLayoutEmailCreateAccount_Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.144"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/edtLogin_EmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="49sp"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="14sp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutEmailCreateAccount_Password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="315sp"
+        android:layout_height="90sp"
+        android:layout_margin="4dp"
+        android:layout_marginLeft="5sp"
+        android:hint="@string/password"
+        android:textColorHint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterTextColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:helperText="Required*"
+        app:helperTextTextColor="@android:color/holo_red_light"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutEmailCreateAccount_EmailAddress"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/edtLogin_Password"
+            android:layout_width="match_parent"
+            android:layout_height="49sp"
+            android:inputType="textPassword"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="14sp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="211dp"
+        android:layout_height="52dp"
+        android:text="@string/create_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

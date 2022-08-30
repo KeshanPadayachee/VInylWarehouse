@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150sp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:orientation="vertical"
+        android:paddingTop="10sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgCustomCameraGalleryDialog_Gallery"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/gallery_icon"></ImageView>
+
+            <TextView
+                android:id="@+id/txvCustomCameraGalleryDialog_Gallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Open Gallery"
+                android:paddingTop="12sp"
+                android:text="Gallery"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5sp">
+
+            <ImageView
+                android:id="@+id/imgCustomCameraGalleryDialog_Camera"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/camera_icon"></ImageView>
+
+            <TextView
+                android:id="@+id/txvCustomCameraGalleryDialog_Camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Open Camera"
+                android:paddingTop="12sp"
+                android:text="Camera"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

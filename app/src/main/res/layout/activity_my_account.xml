@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark"
+    android:contentDescription="@string/user_email"
+    tools:context=".MyAccount">
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressMyAccount"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indeterminateAnimationType="contiguous"
+        app:indicatorColor="@array/progress_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvMyAccount_Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/my_account"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvMyAccount_Username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/user_name"
+        android:fontFamily="@font/poppins"
+        android:text="@string/test"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMyAccount_BackArrow" />
+
+    <TextView
+        android:id="@+id/txvMyAccount_EmailAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins"
+        android:maxLines="2"
+        android:text="@string/test"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvMyAccount_Username"
+        app:layout_wrapBehaviorInParent="vertical_only" />
+
+    <Button
+        android:id="@+id/btnMyAccount_PrivacyPolicy"
+        android:layout_width="180sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/yellow"
+        android:contentDescription="@string/view_privacy_policy"
+        android:fontFamily="@font/poppins"
+        android:text="@string/privacy_policy"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvMyAccount_EmailAddress" />
+
+    <Button
+        android:id="@+id/btnMyAccount_DeleteAccount"
+        android:layout_width="180sp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:contentDescription="@string/delete_account"
+        android:fontFamily="@font/poppins"
+        android:text="@string/delete_account"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMyAccount_PrivacyPolicy"
+        app:layout_constraintVertical_bias="0.043"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/imgMyAccount_BackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00000000"
+        android:contentDescription="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>

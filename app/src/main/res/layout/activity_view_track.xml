@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark"
+    tools:context=".ViewTrack">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressViewTracks"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            app:indeterminateAnimationType="contiguous"
+            app:indicatorColor="@array/progress_colors"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvViewTrack_TrackTitle"
+            android:layout_width="315dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="2"
+            android:singleLine="true"
+            android:text="@string/laugh_now_cry_later"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgViewTrack_TackCover" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/imgViewTrack_Options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:contentDescription="@string/options"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:tint="#FFFFFF"
+            app:backgroundTint="#00FFFFFF"
+            app:borderWidth="0sp"
+            app:elevation="0sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#CF2020"
+            app:tint="@android:color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/imgViewTrack_BackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:tint="#FFFFFF"
+            app:backgroundTint="#00FFFFFF"
+            app:borderWidth="0sp"
+            app:elevation="0sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#CF2020"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/txvViewTrack_DateOfRelease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/_14_aug_2020"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.783"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvViewTrack_DateOfReleaseHeading" />
+
+        <TextView
+            android:id="@+id/txvViewTrack_Genre"
+            android:layout_width="143dp"
+            android:layout_height="72dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/test"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.91"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvViewTrack_GenreHeading" />
+
+        <TextView
+            android:id="@+id/txvViewTrack_DateOfReleaseHeading"
+            android:layout_width="120dp"
+            android:layout_height="24dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/view_track_date"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.869"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvViewTrack_Genre" />
+
+        <TextView
+            android:id="@+id/txvViewTrack_Artists"
+            android:layout_width="122dp"
+            android:layout_height="87dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/tests"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvViewTrack_ArtistHeading" />
+
+        <TextView
+            android:id="@+id/txvViewTrack_ArtistHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/view_track_artist"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvViewTrack_TrackTitle" />
+
+        <TextView
+            android:id="@+id/txvViewTrack_GenreHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/view_track_genre"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.691"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvViewTrack_TrackTitle" />
+
+        <TextView
+            android:id="@+id/txvViewTrack_Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/track_heading"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgViewTrack_TackCover"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvViewTrack_Heading"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/playerview"
+            android:layout_width="311dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/youtube"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvViewTrack_DateOfRelease">
+
+        </com.google.android.youtube.player.YouTubePlayerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnViewTrack_Edit"-->
+
+    <!--        android:layout_width="100dp"-->
+
+    <!--        android:layout_height="42dp"-->
+    <!--        android:background="@color/light_purple"-->
+    <!--        android:text="@string/edit" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

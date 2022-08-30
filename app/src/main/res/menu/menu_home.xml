@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:background ="@color/light_purple">
+
+    <item   android:id="@+id/nav_account"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="My Account" />
+    <item   android:id="@+id/nav_badges"
+        android:icon="@drawable/ic_baseline_auto_awesome_24"
+        android:title="Badges" />
+    <item   android:id="@+id/nav_graph"
+        android:icon="@drawable/ic_baseline_auto_graph_24"
+        android:title="Graph" />
+    <item   android:id="@+id/nav_help"
+        android:icon="@drawable/ic_baseline_help_24"
+        android:title="Help" />
+    <item   android:id="@+id/nav_twitter"
+        android:icon="@drawable/twitter"
+        android:title="Twitter" />
+    <item   android:id="@+id/nav_instagram"
+        android:icon="@drawable/instagram"
+        android:title="Instagram" />
+    <item android:id="@+id/nav_exit"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Sign Out" />
+</menu>

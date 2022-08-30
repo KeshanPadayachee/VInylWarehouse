@@ -1,0 +1,193 @@
+<resources>
+    <integer-array name="progress_colors">
+        <item>@color/red</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/red</item>
+
+    </integer-array>
+
+    <string name="app_name">Vinyl WareHouse</string>
+    <string name="intro_image_Google_description">Sign in with Google</string>
+    <string name="welcome">Welcome To The</string>
+    <string name="intro_Continue">Continue with</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="login">Log In</string>
+    <string name="filter">Filter</string>
+    <string name="sort_by">Sort By</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="my_account">My Account</string>
+    <string name="badges">Badges</string>
+    <string name="sign_out">Sign Out</string>
+
+
+    <string name="add_album_title">Album Title:</string>
+    <string name="add_album_genre">Genre:</string>
+    <string name="add_album_artist">Artist:</string>
+    <string name="add_album_date_of_release">Date of release:</string>
+    <string name="add_album_rating">Rating:</string>
+
+
+    <string name="add_track_title">Track Title:</string>
+    <string name="add_track_genre">Genre:</string>
+    <string name="add_track_artist">Artist:</string>
+    <string name="add_track_date_of_release">Date of release:</string>
+    <string name="add_track_rating">Rating:</string>
+
+    <string name="edit_track">Edit Track</string>
+    <string name="done">Done</string>
+
+    <string name="upload_photo">Upload a Photo:</string>
+    <string name="add">Add</string>
+
+    <string name="album_gallery_date_of_release">Released on:</string>
+    <string name="track_heading">Track</string>
+
+    <string name="category_heading">Categories</string>
+    <string name="create_category">Create Category</string>
+
+    <string name="set_goal">Set Goal</string>
+    <string name="set_goal_hint">Number of albums</string>
+    <string name="star_description">Star for rating</string>
+    <string name="camera_icon">Camera or Gallery</string>
+    <string name="add_album_image_description">Album Cover</string>
+    <string name="add_track_image_description">Track Cover</string>
+    <string name="progress_heading">Progress</string>
+
+    <string name="hint_date_of_release">Date of Release</string>
+    <string name="hint_genre">Genre</string>
+    <string name="hint_album_title">Album Title</string>
+    <string name="hint_track_title">Track Title</string>
+    <string name="hint_artist">Artists</string>
+
+    <string name="view_track_artist">Artist:</string>
+    <string name="view_track_genre">Genre:</string>
+    <string name="view_track_date">Date of Release:</string>
+
+    <string name="please_wait">Please Wait&#8230;</string>
+
+    <string-array name="sort_options">
+        <item>Newest First</item>
+        <item>Oldest First</item>
+        <item>A-Z</item>
+        <item>Z-A</item>
+    </string-array>
+    <string name="edit">Edit</string>
+    <string name="edit_album">Edit Album</string>
+    <string name="date_example">Jan 01 2020</string>
+    <string name="answer">A:</string>
+    <string name="back_to_view_album">Back to View Album</string>
+    <string name="track_title">Track Title</string>
+    <string name="genre">Genre</string>
+    <string name="add_track">Add Track</string>
+    <string name="artists">Artists</string>
+    <string name="date_of_release">Date of release</string>
+    <string name="jan_01_2020">Jan 01 2020</string>
+    <string name="edit_track_title">Edit Track Title</string>
+    <string name="edit_track_cover">Edit Track Cover</string>
+    <string name="edit_artists">Edit Artists</string>
+    <string name="edit_genre">Edit Genre</string>
+    <string name="your_badges">Your Badges</string>
+    <string name="enter_track_title">Enter Track Title</string>
+    <string name="enter_artists">Enter Artists</string>
+    <string name="enter_genre">Enter Genre</string>
+    <string name="enter_date_of_release">Enter Date of release</string>
+    <string name="upload_a_track_cover">Upload a Track Cover</string>
+    <string name="enter_rating">Enter Rating</string>
+    <string name="enter_album_title">Enter Album Title</string>
+    <string name="sort_albums">Sort Albums</string>
+    <string name="open_side_menu">Open Side Menu</string>
+    <string name="search_albums_and_tracks">Search Albums and Tracks</string>
+    <string name="filter_albums">Filter Albums</string>
+    <string name="bronze_award">Bronze Award</string>
+    <string name="_100_albums">100 Albums</string>
+    <string name="bronze_badge">Bronze badge</string>
+    <string name="_50_albums">50 Albums</string>
+    <string name="_10_albums">10 Albums</string>
+    <string name="diamond_badge">Diamond Badge</string>
+    <string name="P10_albums">10 albums</string>
+    <string name="silver_badge">Silver Badge</string>
+    <string name="gold_badge">Gold Badge</string>
+    <string name="user_name">User name</string>
+    <string name="view_privacy_policy">View Privacy Policy</string>
+
+    <string name="user_email">User Email</string>
+
+
+    <string name="delete_account">Delete Account</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="skip_video">Skip Video</string>
+    <string name="tutorial_video">Tutorial Video</string>
+    <string name="skip_next">Skip/Next</string>
+    <string name="options">Options</string>
+    <string name="released_on">Released On:</string>
+    <string name="album_name">Album Name</string>
+    <string name="album_title">Album title</string>
+
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="album_artists">Album Artists</string>
+    <string name="artist">Artist</string>
+    <string name="rating">Rating:</string>
+    <string name="album_genre">Album Genre</string>
+    <string name="genre_data">Genre data</string>
+    <string name="genreS">Genre:</string>
+    <string name="abbey_road">Abbey Road</string>
+    <string name="goal">Goal</string>
+    <string name="_0_10">0/10</string>
+    <string name="_20_albums">20 Albums</string>
+
+    <string name="progress_bar">Progress bar</string>
+    <string name="goals">GOAL</string>
+    <string name="add_album">Add Album</string>
+    <string name="todo">TODO</string>
+    <string name="youtube">Youtube</string>
+    <string name="laugh_now_cry_later">Laugh Now Cry Later</string>
+    <string name="_14_aug_2020">14 Aug 2020</string>
+    <string name="test">test</string>
+    <string name="tests">Test</string>
+    <string name="optional">Optional</string>
+    <string name="click_on_cover_to_add_track">Click on cover to add track</string>
+    <string name="add_track_manually">Add Track Manually</string>
+    <string name="view_more_tracks">View More Tracks</string>
+    <string name="previous">Previous</string>
+    <string name="view_previous_tracks">View Previous Tracks</string>
+
+    <string name="sign_up_create_account">Sign-Up / Create Account</string>
+
+    <string name="create_account">Create Account</string>
+
+    <string name="log_in">Log-In</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="frequently_asked_questions">Frequently Asked Questions</string>
+    <string name="question">Q:</string>
+    <string name="why_is_the_video_for_my_track_is_not_loading_or_is_loading_an_incorrect_video">Why is the video for my track is not loading or is loading an incorrect video?</string>
+    <string name="if_the_video_for_your_track_isn_t_loading_or_is_loading_an_incorrect_video_ensure_that_the_name_of_the_track_is_spelt_correctly">If the video for your track isn’t loading or is loading an incorrect video ensure that the name of the track is spelt correctly.</string>
+
+    <string name="why_am_i_unable_to_sign_in_with_my_google_account">Why am I unable to sign in with my google account?</string>
+
+    <string name="if_you_are_unable_to_sign_in_with_your_existing_google_account_firstly_ensure_that_you_are_connected_to_a_stable_internet_connection_secondly_ensure_that_the_account_details_which_you_have_provided_are_correct">If you are unable to sign in with your existing google account firstly, ensure that you are connected to a stable internet connection. Secondly, ensure that the account details which you have provided are correct.</string>
+
+    <string name="how_can_i_sign_out_of_my_account">How can I sign out of my account?</string>
+
+    <string name="to_sign_out_of_your_account_simply_select_the_sign_out_tab_on_the_home_screen_s_side_menu">To sign out of your account simply select the ‘Sign Out’ tab on the home screen’s side menu.</string>
+
+    <string name="if_you_have_any_further_questions_you_can_contact_us_by_simply_emailing_vinylmember_gmail_com">If you have any further questions, You can contact us by simply emailing: vinylmember@gmail.com</string>
+    <string name="how_can_i_delete_my_account">How can I delete my account?</string>
+
+    <string name="vinyl_warehouse_video_tutorial">Vinyl Warehouse Video Tutorial</string>
+    <string name="to_delete_you_account_simply_select_the_my_account_tab_on_the_home_screen_s_side_menu_once_the_my_account_tab_has_successfully_loaded_select_the_delete_account_button_and_confirm_your_deletion">To delete you account simply select the ‘My Account’ tab on the home screen’s side menu. Once the ‘My Account’ tab has successfully loaded, select the ‘Delete Account’ button and confirm your deletion.</string>
+    <string name="our_team_at_the_vinyl_warehouse_ensure_that_the_utmost_priority_is_given_to_the_secure_storage_and_use_of_our_user_s_data_for_a_full_breakdown_of_how_your_data_is_being_used_stored_view_the_application_s_privacy_policy_under_the_my_account_tab_on_the_home_screen_s_side_menu">Our team at the Vinyl Warehouse ensure that the utmost priority is given to the secure storage and use of our user’s data. For a full breakdown of how your data is being used/stored view the application’s privacy policy under the ‘My Account’ tab on the home screen’s side menu.</string>
+
+    <string name="how_is_my_personal_data_being_used_stored">How is my personal data being used/stored?</string>
+    <string name="graph">Graph</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_with_email_and_password">Sign In With Email and Password</string>
+    <string name="dont_have_an_account_create_one_here">Dont Have an Account? Create one Here</string>
+
+</resources>

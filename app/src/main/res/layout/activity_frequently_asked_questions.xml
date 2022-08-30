@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark"
+    tools:context=".FrequentlyAskedQuestions">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgAddTrack_BackArrow"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:contentDescription="@string/back"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_back_24dp"
+            tools:ignore="UseAppTint" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/frequently_asked_questions"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="31dp"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:text="@string/question"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+                    android:layout_weight="8"
+                    android:text="@string/why_is_the_video_for_my_track_is_not_loading_or_is_loading_an_incorrect_video"
+                    android:textColor="@color/white" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/answer"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/if_the_video_for_your_track_isn_t_loading_or_is_loading_an_incorrect_video_ensure_that_the_name_of_the_track_is_spelt_correctly"
+                    android:textColor="@color/white"
+                    android:layout_weight="8"></TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/question"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/why_am_i_unable_to_sign_in_with_my_google_account"
+                    android:textColor="@color/white"
+                    android:layout_weight="8"></TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/answer"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="304dp"
+                    android:layout_column="2"
+                    android:text="@string/if_you_are_unable_to_sign_in_with_your_existing_google_account_firstly_ensure_that_you_are_connected_to_a_stable_internet_connection_secondly_ensure_that_the_account_details_which_you_have_provided_are_correct"
+                    android:textColor="@color/white"
+                    android:layout_weight="8"></TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/question"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/how_can_i_sign_out_of_my_account"
+                    android:textColor="@color/white"
+                    android:layout_weight="8"></TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/answer"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/to_sign_out_of_your_account_simply_select_the_sign_out_tab_on_the_home_screen_s_side_menu"
+                    android:textColor="@color/white"
+                    android:layout_weight="8"></TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/question"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="356dp"
+                    android:layout_column="2"
+                    android:text="@string/how_is_my_personal_data_being_used_stored"
+                    android:textColor="@color/white"
+                    android:layout_weight="8"></TextView>
+            </TableRow>
+
+            <TableRow android:layout_height="117dp">
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/answer"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/our_team_at_the_vinyl_warehouse_ensure_that_the_utmost_priority_is_given_to_the_secure_storage_and_use_of_our_user_s_data_for_a_full_breakdown_of_how_your_data_is_being_used_stored_view_the_application_s_privacy_policy_under_the_my_account_tab_on_the_home_screen_s_side_menu"
+                    android:textColor="@color/white"
+                    android:layout_weight="10"></TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/question"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/how_can_i_delete_my_account"
+                    android:textColor="@color/white"
+                    android:layout_weight="10"></TextView>
+            </TableRow>
+
+            <TableRow android:layout_height="101dp">
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/answer"
+                    android:textColor="@color/white"
+                    android:layout_weight="2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/to_delete_you_account_simply_select_the_my_account_tab_on_the_home_screen_s_side_menu_once_the_my_account_tab_has_successfully_loaded_select_the_delete_account_button_and_confirm_your_deletion"
+                    android:layout_weight="10"
+                    android:textColor="@color/white"></TextView>
+            </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/if_you_have_any_further_questions_you_can_contact_us_by_simply_emailing_vinylmember_gmail_com"
+                android:textColor="@color/white" />
+
+
+        </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_view_tutorial"
+                android:layout_width="182dp"
+                android:layout_height="wrap_content"
+                android:text="@string/vinyl_warehouse_video_tutorial" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+

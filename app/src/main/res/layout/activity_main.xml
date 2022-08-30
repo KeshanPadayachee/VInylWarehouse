@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark_rotated"
+    tools:context=".MainActivity"
+    android:screenOrientation="portrait">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressMain"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indeterminateAnimationType="contiguous"
+        app:indicatorColor="@array/progress_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerMainActivity_Albums"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabMainActivity_AddAlbum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:contentDescription="@string/add_album"
+                app:backgroundTint="@color/very_light_purple"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.943"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.942"
+                app:srcCompat="@drawable/outline_add_white_20" />
+
+            <TextView
+                android:id="@+id/txvMainActivity_Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.371"
+                app:layout_constraintStart_toEndOf="@+id/btnNav"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnNav"
+                android:layout_width="59dp"
+                android:layout_height="59dp"
+                android:background="@drawable/ic_hamburger_foreground"
+                android:contentDescription="@string/open_side_menu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <SearchView
+                android:id="@+id/searchViewMainActivity_Search"
+                android:layout_width="match_parent"
+                android:layout_height="35sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/roundstyle"
+                android:contentDescription="@string/search_albums_and_tracks"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvMainActivity_Heading" />
+
+            <Button
+                android:id="@+id/btnMainActivity_Categories"
+                android:layout_width="203dp"
+                android:layout_height="42dp"
+
+                android:backgroundTint="@color/light_purple"
+                android:drawableLeft="@drawable/baseline_folder_open_black_24dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/category_heading"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:iconTint="@color/light_purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.086"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchViewMainActivity_Search" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:alpha="0.42"
+                android:foreground="@color/light_purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMainActivity_Categories" />
+
+            <Spinner
+                android:id="@+id/spinnerMainActivity_Sort"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/black"
+                android:contentDescription="@string/sort_albums"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerMainActivity_Albums"
+                app:layout_constraintEnd_toEndOf="@+id/btnMainActivity_Categories"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMainActivity_Categories" />
+
+            <Spinner
+                android:id="@+id/spinnerMainActivity_Filter"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/black"
+                android:contentDescription="@string/filter_albums"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerMainActivity_Albums"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.448"
+                app:layout_constraintStart_toEndOf="@+id/btnMainActivity_Categories"
+                app:layout_constraintTop_toBottomOf="@+id/btnMainActivity_Categories" />
+
+            <TextView
+                android:id="@+id/txvMainActivity_AddAlbum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/add_album"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.963"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fabMainActivity_AddAlbum" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="303dp"
+
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:visibility="invisible"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/menu_home"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-157dp"
+            tools:layout_editor_absoluteY="-5dp" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

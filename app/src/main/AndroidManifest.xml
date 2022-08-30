@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.varsitycollege.vinyl_warehouse">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_new_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vinyl_WareHouse">
+        <activity
+            android:name=".EmailSign"
+            android:exported="false" />
+        <activity
+            android:name=".EmailCreateAccount"
+            android:exported="false" />
+        <activity
+            android:name=".FrequentlyAskedQuestions"
+            android:exported="false" />
+        <activity
+            android:name=".DeezerAddTrack"
+            android:exported="false" />
+        <activity
+            android:name=".Graph"
+            android:exported="false" />
+        <activity
+            android:name=".TutorialVideo"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacyPolicy"
+            android:exported="false" />
+        <activity
+            android:name=".Badges"
+            android:exported="false" />
+        <activity
+            android:name=".MyAccount"
+            android:exported="false" />
+        <activity
+            android:name=".EditAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".EditTrack"
+            android:exported="false" />
+        <activity
+            android:name=".ViewTrack"
+            android:exported="false" />
+        <activity
+            android:name=".AllAlbums"
+            android:exported="false" />
+        <activity
+            android:name=".ViewAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewTrack"
+            android:exported="false" />
+        <activity
+            android:name=".ViewCategory"
+            android:exported="false" />
+        <activity
+            android:name=".AllCategories"
+            android:exported="false" />
+        <activity
+            android:name=".IntroWelcome"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddNewAlbum"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

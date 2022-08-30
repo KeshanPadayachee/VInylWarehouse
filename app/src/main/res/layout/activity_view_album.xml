@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark"
+    tools:context=".ViewAlbum">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressViewAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indeterminateAnimationType="contiguous"
+        app:indicatorColor="@array/progress_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/img_btn_Options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00000000"
+        android:contentDescription="@string/options"
+        app:layout_constraintBottom_toTopOf="@+id/txvViewAlbum_ReleaseDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabViewAlbum_AddTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="@string/add_track"
+        app:backgroundTint="@color/very_light_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAlbum_ViewTracks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvViewAlbum_Artist" />
+
+    <ImageView
+        android:id="@+id/imgViewAlbum_AlbumCover"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/txvViewAlbum_AlbumName"
+        app:layout_constraintEnd_toStartOf="@+id/txvViewAlbum_Genre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgViewAlbum_BackArrow"
+        app:layout_constraintTop_toBottomOf="@+id/progressViewAlbum"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/txvViewAlbum_Rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="left"
+        android:text="@string/rating"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/rtbViewAlbum_Rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rtbViewAlbum_Rating"
+        app:layout_constraintTop_toBottomOf="@+id/txvViewAlbum_GenreData"
+        app:layout_constraintVertical_bias="0.289" />
+
+    <RatingBar
+        android:id="@+id/rtbViewAlbum_Rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="76dp"
+        android:layout_height="22dp"
+        android:numStars="5"
+        android:progressTint="@color/light_purple"
+        android:stepSize="1"
+        app:layout_constraintBottom_toTopOf="@+id/txvViewAlbum_AlbumName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toEndOf="@+id/imgViewAlbum_AlbumCover"
+        app:layout_constraintTop_toBottomOf="@+id/txvViewAlbum_Rating" />
+
+    <TextView
+        android:id="@+id/txvViewAlbum_Genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="left"
+        android:text="@string/genreS"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvViewAlbum_GenreData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txvViewAlbum_GenreData"
+        app:layout_constraintTop_toBottomOf="@+id/txvViewAlbum_ReleaseDateData"
+        app:layout_constraintVertical_bias="0.163" />
+
+    <TextView
+        android:id="@+id/txvViewAlbum_GenreData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/album_genre"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="left"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/genre_data"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvViewAlbum_Rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvViewAlbum_Genre"
+        app:layout_constraintVertical_bias="0.222" />
+
+
+    <TextView
+        android:id="@+id/txvViewAlbum_AlbumName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/album_title"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/album_name"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewAlbum_AlbumCover" />
+
+    <TextView
+        android:id="@+id/txvViewAlbum_ReleaseDateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="left"
+        android:text="@string/dd_mm_yyyy"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvViewAlbum_Genre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintStart_toEndOf="@+id/imgViewAlbum_AlbumCover"
+        app:layout_constraintTop_toBottomOf="@+id/txvViewAlbum_ReleaseDate"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <TextView
+        android:id="@+id/txvViewAlbum_Artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/album_artists"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/artist"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvViewAlbum_AlbumName" />
+
+    <TextView
+        android:id="@+id/txvViewAlbum_ReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="left"
+        android:text="@string/released_on"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvViewAlbum_ReleaseDateData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toEndOf="@+id/imgViewAlbum_AlbumCover"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_Options"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <TextView
+        android:id="@+id/txvViewAlbum_AddTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/add_track"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fabViewAlbum_AddTrack" />
+
+    <ImageView
+        android:id="@+id/imgViewAlbum_BackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/back"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/ic_back_24dp"
+        tools:ignore="UseAppTint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

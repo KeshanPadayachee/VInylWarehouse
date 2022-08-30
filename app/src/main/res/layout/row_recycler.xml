@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressRowRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indeterminateAnimationType="contiguous"
+        app:indicatorColor="@array/progress_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        app:cardBackgroundColor="@color/light_purple"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txvRowRecycler_Artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="80dp"
+            android:text="The Beatles"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/txvRowRecycler_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="20dp"
+            android:text="Abbey Road"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLines="1"/>
+
+        <ImageView
+            android:id="@+id/imgRowRecycler_Cover"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/album_cover" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

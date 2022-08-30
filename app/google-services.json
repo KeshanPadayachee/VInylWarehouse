@@ -1,0 +1,80 @@
+{
+  "project_info": {
+    "project_number": "1013453271071",
+    "firebase_url": "https://vinyl-warehouse-default-rtdb.firebaseio.com",
+    "project_id": "vinyl-warehouse",
+    "storage_bucket": "vinyl-warehouse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013453271071:android:16945a36dd31f68745252a",
+        "android_client_info": {
+          "package_name": "com.varsitycollege.vinyl_warehouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013453271071-c5bgoeue49imuqa6k590ta6j3ep9uf8c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.varsitycollege.vinyl_warehouse",
+            "certificate_hash": "a723293d614541107350b841b0af44b945b8f9f7"
+          }
+        },
+        {
+          "client_id": "1013453271071-jeitt1m0uks63edn9bfm0qtgcdsg0ns7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.varsitycollege.vinyl_warehouse",
+            "certificate_hash": "3bcb16d2ccfe5c7c26bf2981124b43d6f5d0c764"
+          }
+        },
+        {
+          "client_id": "1013453271071-nsbgm3qesr3h5b4qtlvs09pggj3v5ca1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.varsitycollege.vinyl_warehouse",
+            "certificate_hash": "e382a4590960525957f3479c9667d5ff0cd0b9d0"
+          }
+        },
+        {
+          "client_id": "1013453271071-o3ja2jduid9jhf4r4pmlihup9ksr5s6r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.varsitycollege.vinyl_warehouse",
+            "certificate_hash": "1dbaaaf172b45b6967a39d25006a6201a202eca7"
+          }
+        },
+        {
+          "client_id": "1013453271071-o48j21lvpso24ojaa7pg4lrqs2mgaaol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.varsitycollege.vinyl_warehouse",
+            "certificate_hash": "b5772dd8e6262aa7d015cc1df00d372fabcf2f9f"
+          }
+        },
+        {
+          "client_id": "1013453271071-mocn7ij8i5t2g20gtn3b8av00njdpneq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDAmRdJEN413G_EgifxV0ST6hjnsFsIXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013453271071-3l9v8qk7g7pn4cip3agjlto9frviu2tv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

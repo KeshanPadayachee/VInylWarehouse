@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark"
+    android:contentDescription="@string/date_of_release"
+    tools:context=".AddNewTrack">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressAddTrack"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indeterminateAnimationType="contiguous"
+        app:indicatorColor="@array/progress_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutAddTrack_TrackTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:hint="@string/track_title"
+        android:textColorHint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/txtLayoutAddTrack_TrackArtist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAddTrack_Heading"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:startIconDrawable="@drawable/ic_baseline_album_24"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAddTrack_TrackTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutAddTrack_TrackArtist"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:hint="@string/artists"
+        android:textColorHint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/txtLayoutAddTrack_TrackGenre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutAddTrack_TrackTitle"
+        app:startIconDrawable="@drawable/ic_baseline_people_24"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAddTrack_TrackArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLength="50"
+            android:maxLines="2"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutAddTrack_TrackGenre"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:hint="@string/genre"
+        android:textColorHint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutAddTrack_TrackArtist"
+        app:startIconDrawable="@drawable/ic_baseline_music_note_24"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAddTrack_TrackGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLength="50"
+            android:maxLines="2"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txvAddTrack_Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/add_track"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/edtAddTrack_TrackArtist"-->
+    <!--        android:layout_width="210sp"-->
+    <!--        android:layout_height="60sp"-->
+    <!--        android:autofillHints=""-->
+    <!--        android:ems="10"-->
+    <!--        android:gravity="start|top"-->
+    <!--        android:hint="@string/hint_artist"-->
+    <!--        android:inputType="textMultiLine"-->
+    <!--        android:maxLength="50"-->
+    <!--        android:minHeight="48dp"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textColorHint="@color/hint_color"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.587"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.329"-->
+    <!--        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />-->
+
+
+    <!--  <EditText
+        android:id="@+id/edtAddTrack_TrackGenre"
+        android:layout_width="210sp"
+        android:layout_height="60sp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/hint_genre"
+        android:inputType="textMultiLine"
+        android:maxLength="50"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.232"
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />-->
+
+
+    <!--android:src="" -->
+
+    <Button
+        android:id="@+id/btnAddTrack_DatePicker"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/add_track_date_of_release"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/album_gallery_date_of_release"
+        android:text="@string/jan_01_2020"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutAddTrack_TrackGenre" />
+
+    <ImageButton
+        android:id="@+id/btnAddTrack_TrackCover"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/ic_menu_camera"
+        android:contentDescription="@string/add_track_image_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAddTrack_TrackUploadCover"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/txvOptional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/optional"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddTrack_TrackCover"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txvAddTrack_TrackDateOfRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/enter_date_of_release"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/add_track_date_of_release"
+        android:text="@string/add_track_date_of_release"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnAddTrack_DatePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvAddTrack_TrackUploadCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/upload_a_track_cover"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/add_track_image_description"
+        android:text="@string/upload_photo"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAddTrack_TrackDateOfRelease"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <ImageView
+        android:id="@+id/imgAddTrack_PreviewTrackCover"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/add_track_image_description"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddTrack_Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toEndOf="@+id/txvAddTrack_TrackUploadCover"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddTrack_DatePicker"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btnAddTrack_Add"
+        android:layout_width="158dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@color/light_purple"
+        android:contentDescription="@string/add_track"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="@string/add_track"
+        android:text="@string/add"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/imgAddTrack_BackArrow"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:contentDescription="@string/back"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/ic_back_24dp"
+        tools:ignore="UseAppTint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

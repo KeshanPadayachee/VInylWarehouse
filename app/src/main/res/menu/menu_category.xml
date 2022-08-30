@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/itemMenuCategory_AddGoal"
+        android:title="Add Goal" />
+    <item
+        android:id="@+id/itemMenuCategory_Delete"
+        android:title="Delete" />
+</menu>

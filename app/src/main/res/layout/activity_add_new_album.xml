@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark"
+    tools:context=".AddNewAlbum">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressAddAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indeterminateAnimationType="contiguous"
+        app:indicatorColor="@array/progress_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutAddAlbum_AlbumArtist"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/album_artists"
+        android:textColorHint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterTextColor="@color/white"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutAddAlbum_AlbumTitle"
+        app:startIconDrawable="@drawable/ic_baseline_people_24"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAddAlbum_AlbumArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/album_artists"
+            android:inputType="textMultiLine"
+            android:maxLength="50"
+            android:maxLines="3"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutAddAlbum_AlbumGenre"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:hint="@string/album_genre"
+        android:textColorHint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterTextColor="@color/white"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutAddAlbum_AlbumArtist"
+        app:startIconDrawable="@drawable/ic_baseline_music_note_24"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAddAlbum_AlbumGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/add_album_genre"
+            android:inputType="textMultiLine|text"
+            android:maxLength="50"
+            android:maxLines="2"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+        android:id="@+id/imgAddAlbum_BackArrow"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:contentDescription="@string/back"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/ic_back_24dp"
+        tools:ignore="UseAppTint" />
+
+
+    <TextView
+        android:id="@+id/txvAddAlbum_Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/add_album"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/add_album"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddAlbum_DatePicker"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/date_example"
+        android:text="@string/jan_01_2020"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutAddAlbum_AlbumGenre" />
+
+
+    <TextView
+        android:id="@+id/txvAddAlbum_AlbumDateOfRelease2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/enter_date_of_release"
+        android:text="@string/add_album_date_of_release"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnAddAlbum_DatePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvAddAlbum_AlbumRating2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/enter_rating"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/enter_rating"
+        android:text="@string/add_album_rating"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAddAlbum_AlbumDateOfRelease2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txvAddAlbum_AlbumUploadCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/upload_photo"
+        android:fontFamily="@font/roboto_light"
+        android:hint="@string/upload_photo"
+        android:text="@string/upload_photo"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAddAlbum_AlbumRating2"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <RatingBar
+        android:id="@+id/rtbAddAlbum_Rating"
+        android:layout_width="233dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="15dp"
+        android:numStars="5"
+        android:progressTint="@color/light_purple"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:stepSize="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddAlbum_DatePicker" />
+
+    <ImageButton
+        android:id="@+id/btnAddAlbum_AlbumCover"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:drawable/ic_menu_camera"
+        android:contentDescription="@string/camera_icon"
+        android:progressTint="@color/light_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgAddAlbum_PerviewAlbumCover"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAddAlbum_AlbumUploadCover"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgAddAlbum_PerviewAlbumCover"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/add_album_image_description"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddAlbum_Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvAddAlbum_AlbumUploadCover"
+        app:layout_constraintTop_toBottomOf="@+id/rtbAddAlbum_Rating"
+        app:layout_constraintVertical_bias="0.473"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnAddAlbum_Add"
+        android:layout_width="191dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/light_purple"
+        android:contentDescription="@string/add"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="@string/add_album"
+        android:text="@string/add"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddAlbum_AlbumCover"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutAddAlbum_AlbumTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:focusable="auto"
+        android:hint="@string/album_title"
+        android:textColorHint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterTextColor="@color/white"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAddAlbum_Heading"
+        app:startIconDrawable="@drawable/ic_baseline_album_24"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAddAlbum_AlbumTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/album_title"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
